@@ -154,10 +154,6 @@ main article:nth-child(2) {
         margin: 100px 0px;
     }
 
-    main {
-        margin-bottom: 100px;
-    }
-
     header {
         text-align: center;
         width: 90%;

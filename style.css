@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-size: 62.5%; /* 1 REM = 10PX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    flex-direction: column;
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+    padding-top: 40px;
+}
+
+header span {
+    font-weight: 600;
+}
+
+main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+main article:nth-child(1) {
+    font-size: 0.9rem;
+    width: 500px;
+    text-align: center;
+    color: hsl(229, 6%, 66%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main article:nth-child(2) {
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-container,
+.horizontal-item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-container {
+    gap: 30px;
+}
+
+.horizontal-item {
+    margin: 0 30px;
+}
+
+.vertical-container section,
+.horizontal-item section {
+    background-color: hsl(0, 0%, 100%);
+    padding: 0px 30px;
+    width: 300px;
+    height: 180px;
+    border-radius: 5px;
+    filter: drop-shadow(5px 5px 5px hsl(213, 31%, 93%));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.vertical-container section .imgBox {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.vertical-container section .imgBox img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.vertical-container section:nth-child(1) {
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+.vertical-container section:nth-child(2) {
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+.top-item {
+    border-top: 3px solid hsl(180, 62%, 55%)
+}
+
+.bottom-item {
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+.vertical-container section h1,
+.horizontal-item section h1 {
+    display: flex;
+    align-self: flex-start;
+    color: hsl(245, 7%, 33%);
+    font-size: 1.7em;
+}
+
+.vertical-container section p,
+.horizontal-item section p {
+    color: hsl(270, 1%, 73%);
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    main article:nth-child(2) {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .horizontal-item {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        text-align: center;
+        width: 90%;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    main article:nth-child(1) {
+        text-align: center;
+        width: 90%;
+    }
+
+    section {
+        width: 90%;
+    }
+}
